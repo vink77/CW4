@@ -1,51 +1,29 @@
 import requests
 from functions import *
+from save_file import *
 
 
-def get_doc(vacancy,per_page=10, page=0):
-    params = {
-        'text': vacancy,
-        'area': 1,
-        'pages': page,
-        'per_page': per_page}
-    response = requests.get('https://api.hh.ru/vacancies', params).json()
-    return response.get("items", [])
 
 
 @classmethod
 class Job():
     while True:
-        print("1.найти вакансию")
+        print("\n1.найти вакансию")
         print("2.сохранить в файл")
         print("3.выйти")
-        choiсe = "1"
-        # choiсe = input("Ваш выбор - ")
+        choiсe = input("Ваш выбор - ")
 
         if choiсe == '1':
             platforms = ["HeadHunter", "SuperJob"]
             search_query = input("Введите поисковый запрос: ")
             top_n = int(input("Введите количество вакансий для вывода в топ N: "))
-            hh = get_doc(search_query,top_n)
-            i = 1
-            for item in hh:
-                print('\n',i, ' ', item['name'],end='')
-                a = 70 - len(item['name'])-len(str(i))
+            output(search_query,top_n)
 
-                if item['salary'] != None:
-                    print(f"{' '* a} зарплата от {item['salary']['from']}",end='')
-                    if item['salary']['to'] != None:
-                        print(f"  до {item['salary']['to']}",end='')
+            #filter_words = input("\nВведите ключевые слова для фильтрации вакансий: ").split()
+            #filtered_vacancies = filter_vacancies(hh_vacancies, superjob_vacancies, filter_words)
 
-                else:
-                    print(f"{' '* a} размер зарплаты отсутствует",end='')
-                i +=1
-            break
-            top_n = int(input("Введите количество вакансий для вывода в топ N: "))
-            filter_words = input("Введите ключевые слова для фильтрации вакансий: ").split()
-            filtered_vacancies = filter_vacancies(hh_vacancies, superjob_vacancies, filter_words)
-
-            if not filtered_vacancies:
-                print("Нет вакансий, соответствующих заданным критериям.")
+            #if not filtered_vacancies:
+            #    print("Нет вакансий, соответствующих заданным критериям.")
             # return
 
             #     sorted_vacancies = sort_vacancies(filtered_vacancies)
@@ -53,7 +31,10 @@ class Job():
             #     print_vacancies(top_vacancies)
 
         if choiсe == "2":
-            pass
+            file_xls = input('Введите имя файла: ')
+            save_xls()
+
+
         if choiсe == '3':
             break
 
