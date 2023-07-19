@@ -13,22 +13,20 @@ def get_doc(vacancy,per_page=10, page=0):
 def get_vacancies(vacancy, params):
         """Метод для получения вакансий в формате JSON"""
 
-    headers = {
-            "X-Api-App-Id": API_SECRET_KEY
-        }
-        for page in range(10):
-            time.sleep(1)
-            params = {
-                "keyword": str(input()),
-                "page": page,
-                "per_page": "100"
-            }
-        response = requests.get("https://api.superjob.ru/2.0/vacancies/",
-                                params=params,
-                                headers=headers)
-        if not response.status_code == HTTPStatus.OK:
-            return f'Ошибка! Статус-код: {response.status_code}'
-        return response.json()['objects']
+#    headers = {"X-Api-App-Id": API_SECRET_KEY}
+#        for page in range(10):
+#            time.sleep(1)
+#            params = {
+#                "keyword": str(input()),
+#                "page": page,
+#                "per_page": "100"
+#            }
+#        response = requests.get("https://api.superjob.ru/2.0/vacancies/",
+#                                params=params,
+#                                headers=headers)
+#        if not response.status_code == HTTPStatus.OK:
+#            return f'Ошибка! Статус-код: {response.status_code}'
+#        return response.json()['objects']
 
 
 

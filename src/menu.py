@@ -2,9 +2,6 @@ import requests
 from functions import *
 from save_file_xls import *
 
-
-
-
 @classmethod
 class Job():
     while True:
