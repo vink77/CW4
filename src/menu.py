@@ -1,20 +1,28 @@
-import requests
-from functions import *
+from src.api import *
 from save_file_xls import *
 
 @classmethod
 class Job():
+
+    hh_api = HHApi()
+    sj_api = SJApi()
     while True:
         print("\n1.найти вакансию")
         print("2.сохранить в файл")
         print("3.выйти")
         choiсe = input("Ваш выбор - ")
-
+        choiсe = "1"
         if choiсe == '1':
             platforms = ["HeadHunter", "SuperJob"]
             search_query = input("Введите поисковый запрос: ")
-            top_n = int(input("Введите количество вакансий для вывода в топ N: "))
-            output(search_query,top_n)
+            search_query = "энергетик"
+            #top_n = int(input("Введите количество вакансий для вывода в топ N: "))
+            top_n =20
+            hh = HHApi()
+            sj = SJApi()
+            vacancies = hh.search(search_query)
+            vacancies2 = sj.search(search_query)
+
 
             #filter_words = input("\nВведите ключевые слова для фильтрации вакансий: ").split()
             #filtered_vacancies = filter_vacancies(hh_vacancies, superjob_vacancies, filter_words)
