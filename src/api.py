@@ -1,5 +1,4 @@
 from abc import ABC,abstractmethod
-from src.functions import Vacancy
 import requests, os
 
 class API(ABC):
@@ -18,10 +17,11 @@ class HHApi(API):
         self.url = url
         super().__init__(url)
 
-    def  search(self, request_job):
+    def  search(self, request_job, city):
+        town_hh = [1, 2, 1229]
         params = {
             'text': request_job,
-            'area': 1,
+            'area': town_hh[city-1],
             'pages': 0,
             'per_page': self.num_vacancies}
         response = requests.get(self.url, params).json()
@@ -30,16 +30,15 @@ class HHApi(API):
         result = []
         for item in response['items']:
             salary = item.get('salary', {})
-            result.append(
-                Vacancy(
-                    name=item['name'],
-                    url=item['url'],
-                    description=item['snippet']['requirement'],
-                    salary_to=salary.get('to') if salary is not None else None,
-                    salary_from=salary.get('from') if salary is not None else None
-                )
+            result.append({
+                    "name": item['name'],
+                    "town": item['area']['name'],
+                    "firm_name": item['employer']['name'],
+                    "url": item['url'],
+                    "description": item['snippet']['requirement'],
+                    "salary_to":salary.get('to') if salary is not None else None,
+                    "salary_from":salary.get('from') if salary is not None else None}
             )
-        print(result)
         return result
         #else:
          #   print('Ошибка при запросе данных о вакансиях')
@@ -51,29 +50,37 @@ class SJApi(API):
         self.url = url
         super().__init__(url)
 
-    def  search(self, request_job):
-        api_key: str = os.getenv('Sjob_API_KEY')
-        headers = {'X-Api-App-Id': api_key}
+    def  search(self, request_job, city):
+       # api_key: str = os.getenv('Sjob_API_KEY')
+        if city == 1:
+           town_sj = "москва"
+        elif city == 2:
+           town_sj = "Санкт-питербург"
+        elif city == 3:
+           town_sj = "кемерово"
 
+        headers = {
+            'X-Api-App-Id':
+                'v3.r.137478329.0484df93bd0dbe1d4ec473961f0e68359d16d3f6.0ab6ee7c38c6375a5deb84c35464cc67b7b4c44b'
+        }
 
         params = {
-            "keywords": [1, request_job],
+            "keywords": [request_job],
             "count": self.num_vacancies,
+            "town": town_sj
         }
 
 
         response = requests.get(self.url, headers=headers, params=params).json()
-        print('\n', response)
         result = []
         for item in response['objects']:
-            result.append(
-                Vacancy(
-                    name=item['profession'],
-                    url=item['client']['link'],
-                    description=item['vacancyRichText'],
-                    salary_to=item['payment_to'],
-                    salary_from=item['payment_from'],
-                )
+            result.append({
+                    "name": item['profession'],
+                    "town": item['town']['title'],
+                    "firm_name": item['firm_name'],
+                    "url":item['link'],
+                    "description":item['vacancyRichText'][0:199],
+                    "salary_to":item['payment_to'],
+                    "salary_from":item['payment_from']}
             )
-        print(result)
         return result
