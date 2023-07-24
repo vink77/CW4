@@ -37,14 +37,13 @@ class JsonSaver:
         salary_to = []
 
         for item in vacancies:
-            for i in item:
-                name.append(i['name'])
-                town.append(i['town'])
-                firm_name.append(i['firm_name'])
-                url.append(i['url'])
-                description.append(i['description'])
-                salary_from.append(i['salary_from'])
-                salary_to.append(i['salary_to'])
+                name.append(item['name'])
+                town.append(item['town'])
+                firm_name.append(item['firm_name'])
+                url.append(item['url'])
+                description.append(item['description'])
+                salary_from.append(item['salary_from'])
+                salary_to.append(item['salary_to'])
         df = pd.DataFrame(
         {
                             'Name': name,

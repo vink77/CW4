@@ -28,21 +28,30 @@ class HHApi(API):
 
         #if response.status_code == 200:
         result = []
+        salary_from = salary_to =0
         for item in response['items']:
             salary = item.get('salary', {})
+            if salary == None:
+                salary_from = 0
+                salary_to = 0
+            elif item['salary']['from'] == None:
+                salary_from = 0
+            elif item['salary']['to'] == None:
+                salary_to = 0
+            else:
+                salary_from = salary.get('from')
+                salary_to = salary.get('to')
             result.append({
                     "name": item['name'],
                     "town": item['area']['name'],
                     "firm_name": item['employer']['name'],
                     "url": item['url'],
                     "description": item['snippet']['requirement'],
-                    "salary_to":salary.get('to') if salary is not None else None,
-                    "salary_from":salary.get('from') if salary is not None else None}
+                    "salary_to": salary_to,
+                    "salary_from": salary_from}
             )
         return result
-        #else:
-         #   print('Ошибка при запросе данных о вакансиях')
-          #  return None
+
 
 
 class SJApi(API):
@@ -55,7 +64,7 @@ class SJApi(API):
         if city == 1:
            town_sj = "москва"
         elif city == 2:
-           town_sj = "Санкт-питербург"
+           town_sj = "Санкт-Петербург"
         elif city == 3:
            town_sj = "кемерово"
 
@@ -79,7 +88,7 @@ class SJApi(API):
                     "town": item['town']['title'],
                     "firm_name": item['firm_name'],
                     "url":item['link'],
-                    "description":item['vacancyRichText'][0:199],
+                    "description":item['vacancyRichText'],
                     "salary_to":item['payment_to'],
                     "salary_from":item['payment_from']}
             )

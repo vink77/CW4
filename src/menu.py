@@ -19,16 +19,16 @@ class Job():
             platforms = [HHApi(), SJApi()]
             search_query = input("Введите должность для поиска: ")
             search_query = "энергетик"
-            city = int(input("Выберите город поиска /1 - Москва, 2- Санкт-Питербург, 3- Кемерово/ : "))
+            city = int(input("Выберите город поиска /1 - Москва, 2-Санкт-Петербург, 3- Кемерово/ : "))
             # top_n = int(input("Введите количество вакансий для вывода в топ N: "))
             top_n = 20
             result_all = []
             for i in platforms:
                 vac = i
                 result = vac.search(search_query, city)
-                result_all.append(result)
-            vacancy = Vacancy()
-            vacancy.output_vacancies(result_all)
+                result_all.extend(result)
+            vacancy = Vacancy(result_all)
+            vacancy.output_vacancies()
 
         if choiсe == "2":
             write = JsonSaver()
@@ -38,6 +38,18 @@ class Job():
             write = JsonSaver()
             write.write_vacancies_xls(result_all)
 
+        if choiсe == "4" or choiсe == "5":
+            dict_choice = {"4":"salary_from",  "5":'salary_to'}
+            sort_out = vacancy.sort_list_from(result_all, dict_choice[choiсe])
+
+
+
+           #  sort_list_to = Vacancy.sort_list_to(result_all)
+
+           #  sort_list_to.output_vacancies()
+
+
+
             # filter_words = input("\nВведите ключевые слова для фильтрации вакансий: ").split()
             # filtered_vacancies = filter_vacancies(hh_vacancies, superjob_vacancies, filter_words)
 
@@ -45,9 +57,7 @@ class Job():
             #    print("Нет вакансий, соответствующих заданным критериям.")
             # return
 
-            #     sorted_vacancies = sort_vacancies(filtered_vacancies)
-            #     top_vacancies = get_top_vacancies(sorted_vacancies, top_n)
-            #     print_vacancies(top_vacancies)
+
 
         #     if choiсe == "2":
         #         file_xls = input('Введите имя файла: ')

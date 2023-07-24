@@ -5,17 +5,10 @@ class Vacancy:
     """
     Класс для работы с вакансиями
     """
+    vacancies = []
+    def __init__(self, vacancies):
 
-    def __init__(self):
-
-    #    self.num = num
-    #    self.name = vacancies['name']
-    #    self.town = vacancies['town']
-    #    self.firm_name = vacancies['firm_name']
-    #    self.url = vacancies['url']
-    #    self.salary_to = vacancies['salary_to']
-    #    self.salary_from = vacancies['salary_from']
-    #    self.description = vacancies['escription']
+        self.vacancies = vacancies
 
     #   def __str__(self):
     #       """
@@ -25,28 +18,25 @@ class Vacancy:
     #       return f"\nДолжность: {self.name}\nГород :{self.town}\nФирма: {self.firm_name}\nURL: {self.url}\nЗарплата от: {self.salary_from} до: {self.salary_to}\nОписание: {self.description}\n"
     #  def __repr__(self):
     #     return self.__str__()
-    def output_vacancies (self, vacancies):
-        for item in vacancies:
-            print(item)
-        # print( f"\nДолжность: {item['name']}\nГород :{self.town}\nФирма: {self.firm_name}\nURL: {self.url}\nЗарплата от: {self.salary_from} до: {self.salary_to}\nОписание: {self.description}\n")
+    def output_vacancies(self):
+        for item in self.vacancies:
+            print(f"\nДолжность: {item['name']}\n"
+                f"Город :{item['town']}\n"
+                f"Фирма: {item['firm_name']}\n"
+                f"URL: {item['url']}\n"
+                f"Зарплата от: {item['salary_from']} до: {item['salary_to']}\n")
+    #            f"Описание: {item['description']}\n")
 
-#  def sort_list(execut_list):
-#       # сортировка списка "EXECUTTED" по дате
-#       sorting = sorted(execut_list, key = lambda x: x["date"],reverse = True)
-#       return sorting
+    def sort_list_from(self, sort_pool):
+
+        # сортировка списка "vacancies" по <от>
+
+        print(self.vacancies)
+        sorting = sorted(self.vacancies, key=lambda x: x[sort_pool], reverse=True)
+        print(sorting)
+        return sorting
 
 
-#
-#
-# def get_doc(vacancy, per_page=10, page=0):
-#    params = {
-#        'text': vacancy,
-#        'area': 1,
-#        'pages': page,
-#        'per_page': per_page}
-#    response = requests.get('https://api.hh.ru/vacancies', params).json()
-#    return response.get("items", [])
-#
 # def get_vacancies(vacancy, params):
 #        """Метод для получения вакансий в формате JSON"""
 #
