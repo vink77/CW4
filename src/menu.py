@@ -40,7 +40,11 @@ class Job():
 
         if choiсe == "4" or choiсe == "5":
             dict_choice = {"4":"salary_from",  "5":'salary_to'}
-            sort_out = vacancy.sort_list_from(result_all, dict_choice[choiсe])
+
+            sort_out = vacancy.sort_list(dict_choice[choiсe])
+            sort_out_list = Vacancy(sort_out)
+            print(sort_out)
+            sort_out_list.output_vacancies()
 
 
 

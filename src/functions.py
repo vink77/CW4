@@ -24,16 +24,16 @@ class Vacancy:
                 f"Город :{item['town']}\n"
                 f"Фирма: {item['firm_name']}\n"
                 f"URL: {item['url']}\n"
-                f"Зарплата от: {item['salary_from']} до: {item['salary_to']}\n")
+                f"Зарплата от: {item['salary_from']} до: {item['salary_to']}")
     #            f"Описание: {item['description']}\n")
 
-    def sort_list_from(self, sort_pool):
+    def sort_list(self,sort_pool):
 
         # сортировка списка "vacancies" по <от>
 
         print(self.vacancies)
         sorting = sorted(self.vacancies, key=lambda x: x[sort_pool], reverse=True)
-        print(sorting)
+        print("sorting", sorting)
         return sorting
 
 
