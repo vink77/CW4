@@ -10,6 +10,21 @@ class API(ABC):
     def search(self, request_job):
         pass
 
+    @staticmethod
+    def string_convert(string: str):
+        """
+        Метод для удаления ненужных символов из строки
+        :param string: строка для конвертации
+        :return: строка без лишних символов
+        """
+        symbols = ['\n', '</p>', '<p>', '</li>', '<li>', '<b>', '</b>', '<ul>', '<li>', '</li>', '<br />', '</ul>']
+        try:
+            for symb in symbols:
+                string = string.replace(symb, " ")
+        except AttributeError:
+            return 'не указано'
+
+        return string
 
 class HHApi(API):
     result =[]
@@ -48,7 +63,7 @@ class HHApi(API):
                     "town": item['area']['name'],
                     "firm_name": item['employer']['name'],
                     "url": item['url'],
-                    "description": item['snippet']['requirement'][0:20],
+                    "description": API.string_convert(item['snippet']['requirement']),
                     "salary_to": salary_to,
                     "salary_from": salary_from}
             )
@@ -85,7 +100,7 @@ class SJApi(API):
                     "town": item['town']['title'],
                     "firm_name": item['firm_name'],
                     "url":item['link'],
-                    "description":item['vacancyRichText'][0:20],
+                    "description":API.string_convert(item['vacancyRichText']),
                     "salary_to":item['payment_to'],
                     "salary_from":item['payment_from']}
             )
