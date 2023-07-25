@@ -1,5 +1,5 @@
 from abc import ABC,abstractmethod
-import requests, os
+import requests
 
 class API(ABC):
     def __init__(self, url, num_vacancies = 30):
@@ -17,7 +17,8 @@ class HHApi(API):
         self.url = url
         super().__init__(url)
 
-    def  search(self, request_job, city):
+
+    def search(self, request_job, city):
         town_hh = [1, 2, 1229]
         params = {
             'text': request_job,
@@ -42,31 +43,26 @@ class HHApi(API):
                 salary_from = salary.get('from')
                 salary_to = salary.get('to')
             result.append({
+                    "id": item["id"],
                     "name": item['name'],
                     "town": item['area']['name'],
                     "firm_name": item['employer']['name'],
                     "url": item['url'],
-                    "description": item['snippet']['requirement'],
+                    "description": item['snippet']['requirement'][0:20],
                     "salary_to": salary_to,
                     "salary_from": salary_from}
             )
         return result
-
-
 
 class SJApi(API):
     def __init__(self, url = 'https://api.superjob.ru/2.0/vacancies' ):
         self.url = url
         super().__init__(url)
 
-    def  search(self, request_job, city):
+    def search(self, request_job, city):
        # api_key: str = os.getenv('Sjob_API_KEY')
-        if city == 1:
-           town_sj = "москва"
-        elif city == 2:
-           town_sj = "Санкт-Петербург"
-        elif city == 3:
-           town_sj = "кемерово"
+        dict_town_sj = {1: "москва", 2: "Санкт-Петербург", 3: "кемерово"}
+        #town_sj = dict_town_sj[city]
 
         headers = {
             'X-Api-App-Id':
@@ -76,7 +72,7 @@ class SJApi(API):
         params = {
             "keywords": [request_job],
             "count": self.num_vacancies,
-            "town": town_sj
+            "town": dict_town_sj[city]
         }
 
 
@@ -84,11 +80,12 @@ class SJApi(API):
         result = []
         for item in response['objects']:
             result.append({
+                    "id": item['id'],
                     "name": item['profession'],
                     "town": item['town']['title'],
                     "firm_name": item['firm_name'],
                     "url":item['link'],
-                    "description":item['vacancyRichText'],
+                    "description":item['vacancyRichText'][0:20],
                     "salary_to":item['payment_to'],
                     "salary_from":item['payment_from']}
             )

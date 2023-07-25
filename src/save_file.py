@@ -3,9 +3,9 @@ import pandas as pd
 
 
 class JsonSaver:
-    """Класс для сохранения информации о вакансиях в JSON-файл."""
-
-    def __init__(self, filename = "my_name"):
+    """Класс для сохранения информации о вакансиях в JSON и XLS -файл."""
+    FILE_NAME = "my_name"
+    def __init__(self, filename = FILE_NAME):
         self.filename_json = f"{filename}.json"
         self.filename_xls = filename
 
@@ -15,14 +15,18 @@ class JsonSaver:
         with open(self.filename_json, 'w', encoding='utf-8') as file:
             json.dump(vacancies, file, ensure_ascii=False, indent=4)
 
+    def delete_vacancy_json(self, id):
+        with open(self.filename_json, "r", encoding="utf-8") as file:
+            vacancies = json.load(file)
+            new_vacancies = []
+            for item in vacancies:
+                if str(item['id']) != str(id):
+                    new_vacancies.append(item)
+        with open(self.filename_json, "w", encoding="utf-8") as file:
+            json.dump(new_vacancies, file, ensure_ascii=False, indent=4)
 
     def get_vacancies(self):
         """Метод для получения вакансий из файла my_name.json"""
-        #   try:
-        #       with open(self.filename, 'r', encoding='utf-8') as file:
-        #           vacancy_data = json.load(file)
-        #   except FileNotFoundError:
-        #       pass
         with open(self.filename, 'w+', encoding='utf-8') as file:
             return json.load(file)
 
@@ -56,3 +60,4 @@ class JsonSaver:
         })
 
         df.to_excel(f'./{self.filename_xls}.xlsx', index=False)
+

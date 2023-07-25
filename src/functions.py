@@ -20,12 +20,13 @@ class Vacancy:
     #     return self.__str__()
     def output_vacancies(self):
         for item in self.vacancies:
-            print(f"\nДолжность: {item['name']}\n"
+            print(f"\nid: {item['id']}\n"
+                f"Должность: {item['name']}\n"
                 f"Город :{item['town']}\n"
                 f"Фирма: {item['firm_name']}\n"
                 f"URL: {item['url']}\n"
-                f"Зарплата от: {item['salary_from']} до: {item['salary_to']}")
-    #            f"Описание: {item['description']}\n")
+                f"Зарплата от: {item['salary_from']} до: {item['salary_to']}\n"
+                f"Описание: {item['description']}")
 
     def sort_list(self,sort_pool):
 

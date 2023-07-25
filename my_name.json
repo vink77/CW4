@@ -1,285 +1,562 @@
 [
-    [
-        {
-            "name": "Аналитик медицинских данных",
-            "town": "Кемерово",
-            "firm_name": "Клиническая Медико-Санитарная Часть Энергетик",
-            "url": "https://api.hh.ru/vacancies/82866546?host=hh.ru",
-            "description": "1. Высшее образование (желательно математический или экономический профиль). 2. Знание методов анализа. 3. Уверенный пользователь ПК, офисных программ. 4. ",
-            "salary_to": null,
-            "salary_from": 50000
-        },
-        {
-            "name": "Экономист",
-            "town": "Новокузнецк",
-            "firm_name": "Экси-Групп",
-            "url": "https://api.hh.ru/vacancies/83671863?host=hh.ru",
-            "description": "Высшее экономическое образование. Знание и применение методов анализа и учета экономических показателей деятельности предприятия. 1С, ЭДО (электронный документооборот), Excel...",
-            "salary_to": 45000,
-            "salary_from": 45000
-        },
-        {
-            "name": "Администратор",
-            "town": "Кемерово",
-            "firm_name": "Клиническая Медико-Санитарная Часть Энергетик",
-            "url": "https://api.hh.ru/vacancies/82597718?host=hh.ru",
-            "description": "Среднее профессиональное, высшее образование.",
-            "salary_to": null,
-            "salary_from": 28000
-        },
-        {
-            "name": "Энергетик",
-            "town": "Кемерово",
-            "firm_name": "Cибирская сбытовая компания",
-            "url": "https://api.hh.ru/vacancies/83545068?host=hh.ru",
-            "description": "Образование высшее техническое профильное (инженер-электрик/электромеханик и т. п.). Твердые знания электротехники, правил и норм охраны труда, техники безопасности...",
-            "salary_to": null,
-            "salary_from": 80000
-        },
-        {
-            "name": "Специалист-консультант",
-            "town": "Кемерово",
-            "firm_name": "Клиническая Медико-Санитарная Часть Энергетик",
-            "url": "https://api.hh.ru/vacancies/82866402?host=hh.ru",
-            "description": "Приветствуется опыт работы в медицине, работа в клиентском сервисе или контакт-центре будет преимуществом. Рассматриваем амбициозных кандидатов без опыта: обучаем...",
-            "salary_to": null,
-            "salary_from": 35000
-        },
-        {
-            "name": "Специалист-кассир",
-            "town": "Новокузнецк",
-            "firm_name": "Мегаполис",
-            "url": "https://api.hh.ru/vacancies/83062223?host=hh.ru",
-            "description": "Уверенное владение MS Office ( Outlook, Word, Excel). Коммуникабельность, честность, ответственность. Аналитические способности.",
-            "salary_to": null,
-            "salary_from": 40500
-        },
-        {
-            "name": "Энергетик (бригадир электромонтажников)",
-            "town": "Кемерово",
-            "firm_name": "Инжиниринговая компания SGP",
-            "url": "https://api.hh.ru/vacancies/83625077?host=hh.ru",
-            "description": "Среднетехническое или высшее образование (электротехническое). V группа допуска по электробезопасности.",
-            "salary_to": null,
-            "salary_from": 80000
-        },
-        {
-            "name": "Инженер строительного контроля (энергетик)",
-            "town": "Кемерово",
-            "firm_name": "Красноярск-Стройинжиниринг",
-            "url": "https://api.hh.ru/vacancies/83809904?host=hh.ru",
-            "description": "Образование высшее строительное. Опыт работы от 3 лет строительный контроль. Наличие 3 группы допуска.",
-            "salary_to": 150000,
-            "salary_from": 100000
-        },
-        {
-            "name": "Инженер строительного контроля (электрика)",
-            "town": "Кемерово",
-            "firm_name": "Энергетические решения",
-            "url": "https://api.hh.ru/vacancies/83695874?host=hh.ru",
-            "description": "Образование высшее профильное. Опыт работы в строительстве объектов <highlighttext>энергетики</highlighttext> от 6 лет. Опыт работы в аналогичной должности в службе Строительного...",
-            "salary_to": null,
-            "salary_from": null
-        },
-        {
-            "name": "Ведущий специалист АСУ ТП",
-            "town": "Кемерово",
-            "firm_name": "Газпром нефть",
-            "url": "https://api.hh.ru/vacancies/83674895?host=hh.ru",
-            "description": "Высшее профильное образование. Опыт работы по профессии от 1-го года. Опыт работы с ПЛК Siemens.",
-            "salary_to": null,
-            "salary_from": null
-        },
-        {
-            "name": "Главный инженер",
-            "town": "Кемерово",
-            "firm_name": "ТехноНИКОЛЬ",
-            "url": "https://api.hh.ru/vacancies/83440739?host=hh.ru",
-            "description": "Высшее образование. Опыт работы от 2-х лет на производстве в должности руководителя. Знание основ экономики, организации производства. ",
-            "salary_to": null,
-            "salary_from": 150000
-        },
-        {
-            "name": "Фельдшер",
-            "town": "Кемерово",
-            "firm_name": "Клиническая Медико-Санитарная Часть Энергетик",
-            "url": "https://api.hh.ru/vacancies/82612909?host=hh.ru",
-            "description": "Действующий сертификат \"Лечебное дело\".",
-            "salary_to": null,
-            "salary_from": 35000
-        },
-        {
-            "name": "Кладовщик",
-            "town": "Новокузнецк",
-            "firm_name": "Мегаполис",
-            "url": "https://api.hh.ru/vacancies/83385908?host=hh.ru",
-            "description": "Среднее специальное образование или выше.",
-            "salary_to": null,
-            "salary_from": 45200
-        },
-        {
-            "name": "Монтажник связи (СКС, СКУД, ОПС, АСУ ТП)",
-            "town": "Кемерово",
-            "firm_name": "КТС-Телеком",
-            "url": "https://api.hh.ru/vacancies/81742179?host=hh.ru",
-            "description": "Профильное образование не обязательно. -Желание трудиться, развиваться и зарабатывать. Опыт работы в сфере связи и <highlighttext>энергетики</highlighttext> приветствуется. -Возможно прохождение аттестации...",
-            "salary_to": 150000,
-            "salary_from": 50000
-        },
-        {
-            "name": "Специалист по продвижению услуг",
-            "town": "Кемерово",
-            "firm_name": "Клиническая Медико-Санитарная Часть Энергетик",
-            "url": "https://api.hh.ru/vacancies/82728747?host=hh.ru",
-            "description": "Приветствуется опыт работы в продажах и опыт работы с клиентами. Рассматриваем амбициозных кандидатов без опыта: обучаем на старте карьеры и...",
-            "salary_to": null,
-            "salary_from": 35000
-        },
-        {
-            "name": "Главный энергетик",
-            "town": "Юрга",
-            "firm_name": "КДВ Групп",
-            "url": "https://api.hh.ru/vacancies/83378869?host=hh.ru",
-            "description": "Образование: высшее техническое профильное (<highlighttext>энергетика</highlighttext>, электротехника, электромеханика и др.). Дополнительное образование: группа допуска по электробезопасности – не ниже 4 до и...",
-            "salary_to": null,
-            "salary_from": 100000
-        },
-        {
-            "name": "Главный энергетик",
-            "town": "Новокузнецк",
-            "firm_name": "Мегастройкомплекс",
-            "url": "https://api.hh.ru/vacancies/83060337?host=hh.ru",
-            "description": "Образование высшее техническое. Опыт работы по специальности в строительных организациях. Знание законодательства в области энергообеспечения, проектирования и строительства внешних и...",
-            "salary_to": null,
-            "salary_from": null
-        },
-        {
-            "name": "Энергетик",
-            "town": "Кемерово",
-            "firm_name": "ГКУ Центр занятости населения города Кемерово",
-            "url": "https://api.hh.ru/vacancies/80650701?host=hh.ru",
-            "description": "Высшее образование (техническое) или среднее профессиональное. Опыт работы в аналогичных должностях на производстве не менее 3-х / 5-ти лет...",
-            "salary_to": null,
-            "salary_from": 50000
-        },
-        {
-            "name": "Заместитель начальника управления подготовки, проведения ремонтов и техперевооружения (Кемерово)",
-            "town": "Кемерово",
-            "firm_name": "Сибирская генерирующая Компания",
-            "url": "https://api.hh.ru/vacancies/79491792?host=hh.ru",
-            "description": "Не менее 2-х лет работы на инженерно-технических должностях, связанных с организацией ремонтов объектов <highlighttext>энергетики</highlighttext>. Уверенный пользователь ПК (в...",
-            "salary_to": null,
-            "salary_from": 95700
-        },
-        {
-            "name": "Водитель-экспедитор",
-            "town": "Кемерово",
-            "firm_name": "Мегаполис",
-            "url": "https://api.hh.ru/vacancies/81344323?host=hh.ru",
-            "description": "Водительские права категории В,C.",
-            "salary_to": null,
-            "salary_from": 53300
-        },
-        {
-            "name": "Менеджер (служба главного энергетика)",
-            "town": "Новокузнецк",
-            "firm_name": "РУСАЛ, Центр подбора персонала",
-            "url": "https://api.hh.ru/vacancies/83322858?host=hh.ru",
-            "description": "Высшее инженерно-техническое образование (электротехническое). Опыт от 3-х лет в аналогичной должности. Приветствуется опыт руководителем группы/отдела в таких...",
-            "salary_to": null,
-            "salary_from": null
-        },
-        {
-            "name": "Энергетик",
-            "town": "Полысаево",
-            "firm_name": "НПП Алавеста Инжиниринг",
-            "url": "https://api.hh.ru/vacancies/83658013?host=hh.ru",
-            "description": "Наличие высшего образования - бакалавриат. Наличие дополнительное профессиональное образование - программы повышения квалификации.",
-            "salary_to": 80000,
-            "salary_from": 80000
-        },
-        {
-            "name": "Специалист группы системы менеджмента качества",
-            "town": "Кемерово",
-            "firm_name": "Клиническая Медико-Санитарная Часть Энергетик",
-            "url": "https://api.hh.ru/vacancies/82597649?host=hh.ru",
-            "description": "Высшее образование по направлению подготовки \"Управление качеством\"/ «Стандартизация и метрология» / «Производственный менеджмент». Знание стандартов ISO серии 9000, методов менеджмента качества. ",
-            "salary_to": 45000,
-            "salary_from": 40000
-        },
-        {
-            "name": "Врач-невролог",
-            "town": "Кемерово",
-            "firm_name": "Клиническая Медико-Санитарная Часть Энергетик",
-            "url": "https://api.hh.ru/vacancies/81273751?host=hh.ru",
-            "description": "Наличие действующего сертификата по специальности.",
-            "salary_to": null,
-            "salary_from": 75000
-        },
-        {
-            "name": "Специалист по эксплуатации и обслуживанию здания",
-            "town": "Кемерово",
-            "firm_name": "ИМПРЕСС",
-            "url": "https://api.hh.ru/vacancies/82383426?host=hh.ru",
-            "description": "Высшее техническое образование (желательно инженерное), специализация <highlighttext>энергетика</highlighttext>, механика. Опыт работы по специальности от 3 лет. Опыт работы в эксплуатации сложных...",
-            "salary_to": 60000,
-            "salary_from": 60000
-        },
-        {
-            "name": "Технолог-проектировщик",
-            "town": "Пермяки",
-            "firm_name": "Стройкомплекс",
-            "url": "https://api.hh.ru/vacancies/83793806?host=hh.ru",
-            "description": "Общестроительное проектирование, проектирование инженерных систем. Знание нормативных документов. Знание основ <highlighttext>энергетики</highlighttext> и энергетического строительства. Общестроительное проектирование, проектирование инженерных систем. ",
-            "salary_to": null,
-            "salary_from": 60000
-        },
-        {
-            "name": "Торговый представитель",
-            "town": "Новокузнецк",
-            "firm_name": "Мегаполис",
-            "url": "https://api.hh.ru/vacancies/82045161?host=hh.ru",
-            "description": "Готовность к разъездной работе.",
-            "salary_to": null,
-            "salary_from": 51500
-        },
-        {
-            "name": "Водитель-экспедитор",
-            "town": "Новокузнецк",
-            "firm_name": "Мегаполис",
-            "url": "https://api.hh.ru/vacancies/78599429?host=hh.ru",
-            "description": "Водительские права категории В;С.",
-            "salary_to": null,
-            "salary_from": 62800
-        },
-        {
-            "name": "Энергодиспетчер (на шахте)",
-            "town": "Новокузнецк",
-            "firm_name": "Распадская Угольная Компания",
-            "url": "https://api.hh.ru/vacancies/82635288?host=hh.ru",
-            "description": "Образование от средне-профессионального электротехническое. Опыт работы в сфере <highlighttext>энергетики</highlighttext> от 1 года.",
-            "salary_to": 45000,
-            "salary_from": null
-        },
-        {
-            "name": "Специалист по эксплуатации систем жизнеобеспечения зданий",
-            "town": "Кемерово",
-            "firm_name": "ГАУ УМФЦ Кузбасса",
-            "url": "https://api.hh.ru/vacancies/80356327?host=hh.ru",
-            "description": "Специалист по эксплуатации систем жизнеобеспечения зданий (отопление, электроснабжение, водоснабжение, водоотведение, вентиляция, системы кондиционирования) объектов ГАУ «УМФЦ Кузбасса»: высшее профессиональное (техническое...",
-            "salary_to": 35000,
-            "salary_from": 31000
-        }
-    ],
-    [
-        {
-            "name": "Инженер-энергетик / Мастер механо-энергетической службы",
-            "town": "Кемерово",
-            "firm_name": "Управление Технологического Транспорта",
-            "url": "https://kemerovo.superjob.ru/vakansii/inzhener-energetik-46922808.html",
-            "description": "<p><b>Обязанности:</b></p><ul><li>Обслуживание вагон городка;</li><li>Контроль работы электрооборудования;</li><li>Ведение технической документации;</li><li>Взаимодействие с проверяющими органами зак",
-            "salary_to": 140000,
-            "salary_from": 0
-        }
-    ]
+    {
+        "id": "83902101",
+        "name": "Junior Data Scientist (стажер)",
+        "town": "Москва",
+        "firm_name": "А17",
+        "url": "https://api.hh.ru/vacancies/83902101?host=hh.ru",
+        "description": "Будет плюсом: — Пони",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": "83964034",
+        "name": "Junior Data Scientist",
+        "town": "Москва",
+        "firm_name": "Ренессанс cтрахование, Группа",
+        "url": "https://api.hh.ru/vacancies/83964034?host=hh.ru",
+        "description": "Имеет навыки построе",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": "83761018",
+        "name": "Программист Python",
+        "town": "Москва",
+        "firm_name": "MedMundus",
+        "url": "https://api.hh.ru/vacancies/83761018?host=hh.ru",
+        "description": "Опыт использования O",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": "83618124",
+        "name": "Junior Backend developer (Python)",
+        "town": "Москва",
+        "firm_name": "Effective Mobile",
+        "url": "https://api.hh.ru/vacancies/83618124?host=hh.ru",
+        "description": "Знание <highlighttex",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": "83966648",
+        "name": "Python разработчик (Django)",
+        "town": "Москва",
+        "firm_name": "Hammer Systems",
+        "url": "https://api.hh.ru/vacancies/83966648?host=hh.ru",
+        "description": "Основное - желание р",
+        "salary_to": 90000,
+        "salary_from": 50000
+    },
+    {
+        "id": "83800127",
+        "name": "Инженер-программист junior",
+        "town": "Москва",
+        "firm_name": "ИНИТИ",
+        "url": "https://api.hh.ru/vacancies/83800127?host=hh.ru",
+        "description": "Опыт программировани",
+        "salary_to": 0,
+        "salary_from": 50000
+    },
+    {
+        "id": "83952665",
+        "name": "QA инженер / Тестировщик",
+        "town": "Москва",
+        "firm_name": "Ostec",
+        "url": "https://api.hh.ru/vacancies/83952665?host=hh.ru",
+        "description": "Понимание процесса р",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": "83813635",
+        "name": "Python разработчик junior",
+        "town": "Москва",
+        "firm_name": "amoCRM",
+        "url": "https://api.hh.ru/vacancies/83813635?host=hh.ru",
+        "description": "Знали <highlighttext",
+        "salary_to": 60000,
+        "salary_from": 30000
+    },
+    {
+        "id": "83756975",
+        "name": "Младший аналитик (IT)",
+        "town": "Москва",
+        "firm_name": "Olima",
+        "url": "https://api.hh.ru/vacancies/83756975?host=hh.ru",
+        "description": "Опыт работы в данной",
+        "salary_to": 140000,
+        "salary_from": 100000
+    },
+    {
+        "id": "83689287",
+        "name": "Data Science Intern (LLM)",
+        "town": "Москва",
+        "firm_name": "AIR",
+        "url": "https://api.hh.ru/vacancies/83689287?host=hh.ru",
+        "description": "Начальные знания в о",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": "83494438",
+        "name": "Backend разработчик (Python, Junior), удаленно",
+        "town": "Москва",
+        "firm_name": "Дунаев Михаил Алексеевич",
+        "url": "https://api.hh.ru/vacancies/83494438?host=hh.ru",
+        "description": "Опыт коммерческой ра",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": "83968218",
+        "name": "Младший разработчик",
+        "town": "Москва",
+        "firm_name": "Первая Грузовая Компания",
+        "url": "https://api.hh.ru/vacancies/83968218?host=hh.ru",
+        "description": "Опыт работы в качест",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": "83799646",
+        "name": "Аналитик (junior)",
+        "town": "Москва",
+        "firm_name": "Коннективити Солюшнз",
+        "url": "https://api.hh.ru/vacancies/83799646?host=hh.ru",
+        "description": "Опыт работы с базами",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": "83664059",
+        "name": "Junior программист/разработчик Frontend backend/Junior разработчик",
+        "town": "Москва",
+        "firm_name": "AVPOWER",
+        "url": "https://api.hh.ru/vacancies/83664059?host=hh.ru",
+        "description": "Увлечение микроэлект",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": "83551103",
+        "name": "Python-разработчик (Junior)",
+        "town": "Москва",
+        "firm_name": "Щербин Алексей Сергеевич",
+        "url": "https://api.hh.ru/vacancies/83551103?host=hh.ru",
+        "description": "Профильное высшее об",
+        "salary_to": 80000,
+        "salary_from": 60000
+    },
+    {
+        "id": "83738948",
+        "name": "Тестировщик",
+        "town": "Москва",
+        "firm_name": "АШАН Ритейл Россия",
+        "url": "https://api.hh.ru/vacancies/83738948?host=hh.ru",
+        "description": "Знание языков програ",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": "82841724",
+        "name": "Junior/Middle backend разработчик на Fast API (Python)",
+        "town": "Москва",
+        "firm_name": "Webtronics",
+        "url": "https://api.hh.ru/vacancies/82841724?host=hh.ru",
+        "description": "Уверенные знаниями я",
+        "salary_to": 100000,
+        "salary_from": 50000
+    },
+    {
+        "id": "83185391",
+        "name": "Junior Аналитик",
+        "town": "Москва",
+        "firm_name": "Доценко Дарья",
+        "url": "https://api.hh.ru/vacancies/83185391?host=hh.ru",
+        "description": "Интерес к теме. Вним",
+        "salary_to": 100000,
+        "salary_from": 0
+    },
+    {
+        "id": "83644516",
+        "name": "Backend-разработчик Python",
+        "town": "Москва",
+        "firm_name": "Spider Group",
+        "url": "https://api.hh.ru/vacancies/83644516?host=hh.ru",
+        "description": "Коммерческий опыт пр",
+        "salary_to": 100000,
+        "salary_from": 0
+    },
+    {
+        "id": "83235815",
+        "name": "QA-инженер",
+        "town": "Москва",
+        "firm_name": "АЛЬЯНС КРЕДИТ",
+        "url": "https://api.hh.ru/vacancies/83235815?host=hh.ru",
+        "description": "Базовый знания SQL, ",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": "83221026",
+        "name": "Программист Python",
+        "town": "Москва",
+        "firm_name": "Мухаметов Роберт",
+        "url": "https://api.hh.ru/vacancies/83221026?host=hh.ru",
+        "description": "Средний или выше уро",
+        "salary_to": 40000,
+        "salary_from": 25000
+    },
+    {
+        "id": "82984262",
+        "name": "Junior Developer Go",
+        "town": "Москва",
+        "firm_name": "РДП.РУ",
+        "url": "https://api.hh.ru/vacancies/82984262?host=hh.ru",
+        "description": "Есть базовый опыт в ",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": "83334027",
+        "name": "Data science",
+        "town": "Москва",
+        "firm_name": "Институт экономики и развития транспорта",
+        "url": "https://api.hh.ru/vacancies/83334027?host=hh.ru",
+        "description": "Базовые знания в при",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": "83687958",
+        "name": "Middle Frontend Developer",
+        "town": "Москва",
+        "firm_name": "Лаборатория Маркетинга",
+        "url": "https://api.hh.ru/vacancies/83687958?host=hh.ru",
+        "description": "Опыт разработĸи фрон",
+        "salary_to": 250000,
+        "salary_from": 180000
+    },
+    {
+        "id": "83272536",
+        "name": "Менеджер проектов",
+        "town": "Москва",
+        "firm_name": "МТС",
+        "url": "https://api.hh.ru/vacancies/83272536?host=hh.ru",
+        "description": "Опыт работы от двух ",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": "83406279",
+        "name": "Middle golang разработчик",
+        "town": "Москва",
+        "firm_name": "CRTEX",
+        "url": "https://api.hh.ru/vacancies/83406279?host=hh.ru",
+        "description": "Опыт коммерческой ра",
+        "salary_to": 300000,
+        "salary_from": 150000
+    },
+    {
+        "id": "83716383",
+        "name": "Python Backend Developer",
+        "town": "Москва",
+        "firm_name": "Twinby",
+        "url": "https://api.hh.ru/vacancies/83716383?host=hh.ru",
+        "description": "Мы ищем опытного <hi",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": "82839132",
+        "name": "Удаленный стажер 3d моделирование + computer vision",
+        "town": "Москва",
+        "firm_name": "MindSet",
+        "url": "https://api.hh.ru/vacancies/82839132?host=hh.ru",
+        "description": "Профильное техническ",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": "83270194",
+        "name": "DevOps инженер",
+        "town": "Москва",
+        "firm_name": "CtrlHack",
+        "url": "https://api.hh.ru/vacancies/83270194?host=hh.ru",
+        "description": "Базово знать несколь",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": "83055812",
+        "name": "Junior backend-разработчик на Python",
+        "town": "Москва",
+        "firm_name": "АО НТЦ Атлас",
+        "url": "https://api.hh.ru/vacancies/83055812?host=hh.ru",
+        "description": "Требуемые навыки: Оп",
+        "salary_to": 120000,
+        "salary_from": 80000
+    },
+    {
+        "id": 46109046,
+        "name": "Специалист службы поддержки с техническими знаниями",
+        "town": "Москва",
+        "firm_name": "Яндекс",
+        "url": "https://www.superjob.ru/vakansii/specialist-sluzhby-podderzhki-s-tehnicheskimi-znaniyami-46109046.html",
+        "description": "<p><b> Яндекс Контес",
+        "salary_to": 0,
+        "salary_from": 15000
+    },
+    {
+        "id": 45842844,
+        "name": "Инженер-программист встраиваемых систем",
+        "town": "Москва",
+        "firm_name": "Friendwork",
+        "url": "https://www.superjob.ru/vakansii/inzhener-programmist-vstraivaemyh-sistem-45842844.html",
+        "description": "<b>Обязанности:</b><",
+        "salary_to": 0,
+        "salary_from": 100000
+    },
+    {
+        "id": 46785187,
+        "name": "Аналитик данных / Data Analyst (Стрим Сквозные бизнес-компоненты)",
+        "town": "Москва",
+        "firm_name": "Банк ВТБ (ПАО)",
+        "url": "https://www.superjob.ru/vakansii/analitik-dannyh-46785187.html",
+        "description": "<p>Обязанности:</p> ",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": 46785292,
+        "name": "Бизнес-аналитик (Управление ВТБ PRO)",
+        "town": "Москва",
+        "firm_name": "Банк ВТБ (ПАО)",
+        "url": "https://www.superjob.ru/vakansii/biznes-analitik-46785292.html",
+        "description": "<p>Мы ищем Аналитика",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": 41239513,
+        "name": "Старший научный сотрудник",
+        "town": "Москва",
+        "firm_name": "ФГБОУ ВО МГППУ",
+        "url": "https://www.superjob.ru/vakansii/starshij-nauchnyj-sotrudnik-41239513.html",
+        "description": "<p>Уважаемые коллеги",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": 45812126,
+        "name": "Аналитик",
+        "town": "Москва",
+        "firm_name": "Альпинтех",
+        "url": "https://www.superjob.ru/vakansii/analitik-45812126.html",
+        "description": "<p><b>Перечень задач",
+        "salary_to": 0,
+        "salary_from": 150000
+    },
+    {
+        "id": 45980418,
+        "name": "Преподаватель IT дисциплин / Мастер ПО (Направление IT)",
+        "town": "Москва",
+        "firm_name": "ГБПОУ Колледж связи № 54 имени П. М. Вострухина Образовательное подразделение 8",
+        "url": "https://www.superjob.ru/vakansii/prepodavatel-it-disciplin-45980418.html",
+        "description": "<p><b>Обязанности:</",
+        "salary_to": 0,
+        "salary_from": 85000
+    },
+    {
+        "id": 46185192,
+        "name": "Data Scientist",
+        "town": "Москва",
+        "firm_name": "Спортмастер",
+        "url": "https://www.superjob.ru/vakansii/data-scientist-46185192.html",
+        "description": "<p><b>Обязанности:</",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": 46296771,
+        "name": "Системный инженер",
+        "town": "Москва",
+        "firm_name": "ЭКО центр",
+        "url": "https://www.superjob.ru/vakansii/sistemnyj-inzhener-46296771.html",
+        "description": "<b>Требования:</b><b",
+        "salary_to": 120000,
+        "salary_from": 120000
+    },
+    {
+        "id": 46505351,
+        "name": "Учитель информатики",
+        "town": "Москва",
+        "firm_name": "ГБОУ ШКОЛА № 1579",
+        "url": "https://www.superjob.ru/vakansii/uchitel-informatiki-46505351.html",
+        "description": "<p><b>Обязанности:</",
+        "salary_to": 0,
+        "salary_from": 85000
+    },
+    {
+        "id": 46528737,
+        "name": "Педагог дополнительного образования (Лицей Академии Яндекса)",
+        "town": "Москва",
+        "firm_name": "Школа № 1210",
+        "url": "https://www.superjob.ru/vakansii/pedagog-dopolnitelnogo-obrazovaniya-46528737.html",
+        "description": "<b>Обязанности:</b><",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": 46795750,
+        "name": "Программист Бэкенд AI",
+        "town": "Москва",
+        "firm_name": "ТЕХТОБ",
+        "url": "https://www.superjob.ru/vakansii/programmist-bekend-ai-46795750.html",
+        "description": "<b>Обязанности:<br /",
+        "salary_to": 160000,
+        "salary_from": 80000
+    },
+    {
+        "id": 46872889,
+        "name": "Аналитик данных / Начинающий аналитик данных",
+        "town": "Москва",
+        "firm_name": "ФГАНУ ФЕДЕРАЛЬНЫЙ ИНСТИТУТ ЦИФРОВОЙ ТРАНСФОРМАЦИИ В СФЕРЕ ОБРАЗОВАНИЯ, ФГАНУ ФИЦТО",
+        "url": "https://www.superjob.ru/vakansii/analitik-dannyh-46872889.html",
+        "description": "<b>Обязанности:</b><",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": 46978335,
+        "name": "Инженер технической поддержки / Помощник системного администратора (стажёр)",
+        "town": "Москва",
+        "firm_name": "РЕДЛАБ-И",
+        "url": "https://www.superjob.ru/vakansii/inzhener-tehnicheskoj-podderzhki-46978335.html",
+        "description": "<p><b> Обязанности</",
+        "salary_to": 75400,
+        "salary_from": 0
+    },
+    {
+        "id": 31061879,
+        "name": "Специалист (работа с отчетностью)",
+        "town": "Москва",
+        "firm_name": "МИ ФНС России по ЦОД N2",
+        "url": "https://www.superjob.ru/vakansii/specialist-31061879.html",
+        "description": "<b>Обязанности:</b><",
+        "salary_to": 0,
+        "salary_from": 35000
+    },
+    {
+        "id": 34123084,
+        "name": "Учитель информатики",
+        "town": "Москва",
+        "firm_name": "ГБОУ Школа №2086",
+        "url": "https://www.superjob.ru/vakansii/uchitel-informatiki-34123084.html",
+        "description": "<b>Обязанности:</b><",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": 34424249,
+        "name": "DevOps Engineer",
+        "town": "Москва",
+        "firm_name": "SuperJob",
+        "url": "https://www.superjob.ru/vakansii/devops-engineer-34424249.html",
+        "description": "<p>SuperJob — это ин",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": 43147987,
+        "name": "Инженер Программист",
+        "town": "Москва",
+        "firm_name": "ФГБУ \"Научно-исследовательский центр космической гидрометеорологии \"Планета\"",
+        "url": "https://www.superjob.ru/vakansii/inzhener-programmist-43147987.html",
+        "description": "<b>Обязанности:</b><",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": 43148990,
+        "name": "Инженер-радиоэлектронщик 1 категории",
+        "town": "Москва",
+        "firm_name": "Радиофизика",
+        "url": "https://www.superjob.ru/vakansii/inzhener-radioelektronschik-1-kategorii-43148990.html",
+        "description": "<p><b>Обязанности:</",
+        "salary_to": 0,
+        "salary_from": 100000
+    },
+    {
+        "id": 45760672,
+        "name": "Системный администратор",
+        "town": "Москва",
+        "firm_name": "ТБ ПРОЕКТ",
+        "url": "https://www.superjob.ru/vakansii/sistemnyj-administrator-45760672.html",
+        "description": "<p><b>Обязанности:</",
+        "salary_to": 150000,
+        "salary_from": 0
+    },
+    {
+        "id": 46296647,
+        "name": "Учитель информатики",
+        "town": "Москва",
+        "firm_name": "Школа №2116",
+        "url": "https://www.superjob.ru/vakansii/uchitel-informatiki-46296647.html",
+        "description": "<b>Обязанности:</b><",
+        "salary_to": 0,
+        "salary_from": 100000
+    },
+    {
+        "id": 46276186,
+        "name": "Ведущий системный администратор",
+        "town": "Москва",
+        "firm_name": "СМ-Клиника",
+        "url": "https://www.superjob.ru/vakansii/veduschij-sistemnyj-administrator-46276186.html",
+        "description": "<p>МНОГОПРОФИЛЬНЫЙ М",
+        "salary_to": 180000,
+        "salary_from": 160000
+    },
+    {
+        "id": 46215550,
+        "name": "Системный инженер SOC (ELK)",
+        "town": "Москва",
+        "firm_name": "РТ-Информационная безопасность",
+        "url": "https://www.superjob.ru/vakansii/sistemnyj-inzhener-soc-46215550.html",
+        "description": "<p><b>Обязанности:</",
+        "salary_to": 280000,
+        "salary_from": 160000
+    },
+    {
+        "id": 46708119,
+        "name": "Преподаватель спец. дисциплин (сетевой и системный администратор)",
+        "town": "Москва",
+        "firm_name": "ГОУ СПО Колледж связи",
+        "url": "https://www.superjob.ru/vakansii/prepodavatel-spec-46708119.html",
+        "description": "<b>Обязанности:</b><",
+        "salary_to": 0,
+        "salary_from": 80000
+    },
+    {
+        "id": 46784876,
+        "name": "Аналитик данных (Сквозные бизнес компоненты)",
+        "town": "Москва",
+        "firm_name": "Банк ВТБ (ПАО)",
+        "url": "https://www.superjob.ru/vakansii/analitik-dannyh-46784876.html",
+        "description": "<p>Обязанности:</p> ",
+        "salary_to": 0,
+        "salary_from": 0
+    },
+    {
+        "id": 46883126,
+        "name": "Инженер сопровождения программного обеспечения",
+        "town": "Москва",
+        "firm_name": "Викей",
+        "url": "https://www.superjob.ru/vakansii/inzhener-soprovozhdeniya-programmnogo-obespecheniya-46883126.html",
+        "description": "<b>Обязанности:</b><",
+        "salary_to": 0,
+        "salary_from": 90000
+    }
 ]
