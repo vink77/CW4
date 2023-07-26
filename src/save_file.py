@@ -1,19 +1,17 @@
 import json
-
-import openpyxl
 import pandas as pd
 
-class JsonSaver:
+class Saver:
     """Класс для сохранения информации о вакансиях в JSON и XLS -файл."""
-    FILE_NAME = "my_name"
-    def __init__(self,vacancies, filename = FILE_NAME):
+
+    def __init__(self, vacancies= [], filename='my_name'):
         self.filename_json = f"./{filename}.json"
         self.filename_xls = filename
         self.vacancies = vacancies
 
     def write_vacancies_json(self):
         """Метод для добавления вакансий в JSON формате в файл vacancies.json"""
-
+        print(self.vacancies)
         with open(self.filename_json, 'w', encoding='utf-8') as file:
             json.dump(self.vacancies, file, ensure_ascii=False, indent=4)
 
@@ -27,22 +25,7 @@ class JsonSaver:
         with open(self.filename_json, "w", encoding="utf-8") as file:
             json.dump(new_vacancies, file, ensure_ascii=False, indent=4)
 
-    def get_vacancies_json(self):
-        """Метод для получения вакансий из файла my_name.json"""
-        with open(self.filename_json, 'w+', encoding='utf-8') as file:
-            return json.load(file)
 
-    def get_vacancies_xls(self):
-        """Метод для получения вакансий из файла my_name.json"""
-        book = openpyxl.load_workbook(filename=self.filename_xls)
-        sheet = book.active
-        sheet.column_dimensions['A'].width=50
-
-       # json_str1 = top_players.get()
-       # json_str = json_str1.to_json(orient="records")
-        print(type(top_players),top_players)
-        for row in top_players:
-            print(row)
 
     def write_vacancies_xls(self)-> None:
         '''метод для записи в файл-xls'''

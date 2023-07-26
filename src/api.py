@@ -17,13 +17,14 @@ class API(ABC):
         :param string: строка для конвертации
         :return: строка без лишних символов
         """
-        symbols = ['\n', '</p>', '<p>', '</li>', '<li>', '<b>', '</b>', '<ul>', '<li>', '</li>', '<br />', '</ul>']
+        symbols = ['  ', '   ','\n','</p>', '<p>', '</li>', '<li>', '<b>', '</b>', '<ul>', '<li>', '</li>', '<br />', '</ul>', '<highlighttext>', '·']
         try:
             for symb in symbols:
                 string = string.replace(symb, " ")
-        except AttributeError:
-            return 'не указано'
 
+        except AttributeError:
+
+            return 'не указано'
         return string
 
 class HHApi(API):
@@ -34,7 +35,7 @@ class HHApi(API):
 
 
     def search(self, request_job, city):
-        town_hh = [1, 2, 1229]
+        town_hh = [1, 2, 47, 4]
         params = {
             'text': request_job,
             'area': town_hh[city-1],
@@ -76,7 +77,7 @@ class SJApi(API):
 
     def search(self, request_job, city):
        # api_key: str = os.getenv('Sjob_API_KEY')
-        dict_town_sj = {1: "москва", 2: "Санкт-Петербург", 3: "кемерово"}
+        dict_town_sj = {1: "Москва", 2: "Санкт-Петербург", 3: "Кемерово", 4:"Новосибирск"}
         #town_sj = dict_town_sj[city]
 
         headers = {
