@@ -11,7 +11,6 @@ class Saver:
 
     def write_vacancies_json(self):
         """Метод для добавления вакансий в JSON формате в файл vacancies.json"""
-        print(self.vacancies)
         with open(self.filename_json, 'w', encoding='utf-8') as file:
             json.dump(self.vacancies, file, ensure_ascii=False, indent=4)
 

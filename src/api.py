@@ -33,7 +33,6 @@ class HHApi(API):
         self.url = url
         super().__init__(url)
 
-
     def search(self, request_job, city):
         town_hh = [1, 2, 47, 4]
         params = {
@@ -63,7 +62,7 @@ class HHApi(API):
                     "name": item['name'],
                     "town": item['area']['name'],
                     "firm_name": item['employer']['name'],
-                    "url": item['url'],
+                    "url": item['alternate_url'],
                     "description": API.string_convert(item['snippet']['requirement']),
                     "salary_to": salary_to,
                     "salary_from": salary_from}
