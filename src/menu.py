@@ -4,6 +4,8 @@ from load_file import *
 from functions import *
 import os, pandas
 class Job():
+    SALARY_FROM = 100000 # Константы зарплат для фильтров
+    SALARY_TO = 150000 # Константы зарплат для фильтров
     """Класс взаимодействия с пользователем"""
     hh_api = HHApi()
     sj_api = SJApi()
@@ -99,9 +101,9 @@ class Job():
             print(f"\n{' ' * 8} МЕНЮ работы с фильтрами")
             print("1. Упорядочить список по зарплате < ОТ >")
             print("2. Упорядочить список по зарплате < ДО >")
-            print("3. Показать список вакансий с зарплатой 100 - 150 т.р")
-            print("4. Показать список вакансий с зарплатой 0 - 100 т.р")
-            print("5. Удалить вакансии с зарплатой 0")
+            print(f"3. Показать список вакансий с зарплатой {SALARY_FROM} - {SALARY_TO} руб.")
+            print(f"4. Показать список вакансий с зарплатой 0 - {SALARY_FROM} руб.")
+            print("5. Удалить из списка вакансии без указания зарплаты")
             print("6. выход в основное меню")
             choiсe_filter = input("     Ваш выбор: ")
             if choiсe_filter == "1" or choiсe_filter == "2":
@@ -110,11 +112,17 @@ class Job():
                 result_all= vacancy.sort_list(dict_choice[choiсe_filter])
                 Vacancy(result_all).output_vacancies()
             if choiсe_filter == "3":
-                pass
+                vacancy = Vacancy(result_all)
+                result_all = vacancy.filter_salary(SALARY_FROM, SALARY_TO)
+                Vacancy(result_all).output_vacancies()
             if choiсe_filter == "4":
-                pass
+                vacancy = Vacancy(result_all)
+                result_all = vacancy.filter_salary(0, SALARY_FROM)
+                Vacancy(result_all).output_vacancies()
             if choiсe_filter == "5":
-                pass
+                vacancy = Vacancy(result_all)
+                result_all = vacancy.filter_salary_zero()
+                Vacancy(result_all).output_vacancies()
             if choiсe_filter == "6":
                 break
         if choiсe == '5':
