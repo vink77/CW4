@@ -2,7 +2,7 @@ from src.api import *
 from save_file import *
 from load_file import *
 from functions import *
-import os
+import os, pandas
 class Job():
     """Класс взаимодействия с пользователем"""
     hh_api = HHApi()
@@ -20,7 +20,10 @@ class Job():
             result_all = []
             platforms = [HHApi(), SJApi()]
             search_query = input("Введите должность для поиска: ")
-            city = int(input("Выберите город поиска /1 - Москва, 2-Санкт-Петербург, 3- Кемерово, 4- Новосибирск/ : "))
+            city = 0
+            while city not in ["1","2","3","4"]:
+                city = str(input("Выберите город поиска /1 - Москва, 2-Санкт-Петербург, 3- Кемерово, 4- Новосибирск/ : "))
+            city = int(city)
             for item in platforms:
                 result = item.search(search_query, city)
                 result_all.extend(result)
@@ -30,7 +33,7 @@ class Job():
             while True:
                 print(f"\n{' '*8} МЕНЮ работы с файлом {file_name}.json")
                 print("1. сохранить вакансии в файл json")
-                print("2. удалить вакансию из файла json")
+                print("2. удалить вакансию из файла json по id")
                 print("3. показать вакансии из файла json")
                 print("4. задать имя файла json")
                 print("5. удалить файл json")
@@ -64,7 +67,7 @@ class Job():
             while True:
                 print(f"\n{' ' * 8} МЕНЮ работы с файлом {file_name}.xlsx")
                 print("1. сохранить вакансии в файл xls")
-                print("2. удалить вакансию из файла xls")
+                print("2. удалить вакансию из файла xls по id")
                 print("3. показать вакансии из файла xls")
                 print("4. задать имя файла xls")
                 print("5. удалить файл xls")
@@ -76,9 +79,14 @@ class Job():
                     if os.path.isfile(f'./{file_name}.xlsx'):
                         print(f"файл {file_name}.xlsx сохранен!")
                 if choiсe_file == "2":
-                    pass
-                if choiсe_file == "3":
-                    pass
+                    if os.path.isfile(f'./{file_name}.xlsx'):
+                        id = input("id для удаления ")
+                        result= Loader(file_name)
+                        Saver(result.get_vacancies_xls()).delete_vacancy_xls(id)
+                if choiсe_file == "3":              # показать вакансии из файла xlsx
+                    if os.path.isfile(f'./{file_name}.xlsx'):
+                        result_all = Loader(file_name)
+                        Vacancy(result_all.get_vacancies_xls()).output_vacancies()
                 if choiсe_file == "4":
                     file_name = input("Введите имя файла без расширения :")
                 if choiсe_file == "5":                      # удалить файл xlsx

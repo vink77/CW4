@@ -1,3 +1,4 @@
+from load_file import  *
 import json
 import pandas as pd
 
@@ -28,6 +29,7 @@ class Saver:
 
     def write_vacancies_xls(self)-> None:
         '''метод для записи в файл-xls'''
+        id = []
         name = []
         town = []
         firm_name = []
@@ -37,6 +39,7 @@ class Saver:
         salary_to = []
 
         for item in self.vacancies:
+                id.append(item['id'])
                 name.append(item['name'])
                 town.append(item['town'])
                 firm_name.append(item['firm_name'])
@@ -47,7 +50,8 @@ class Saver:
 
         df = pd.DataFrame(
         {
-                            'Name': name,
+                            'id': id,
+                            'name': name,
                             'town': town,
                             'firm_name': firm_name,
                             'url': url,
@@ -58,12 +62,9 @@ class Saver:
         df.to_excel(f'./{self.filename_xls}.xlsx', index=False)
     def delete_vacancy_xls(self, id):
         """Метод для удаления вакансии из файла my_name.xls по id"""
-
-        with open(self.filename_json, "r", encoding="utf-8") as file:
-            vacancies = json.load(file)
-            new_vacancies = []
-            for item in vacancies:
-                if str(item['id']) != str(id):
-                    new_vacancies.append(item)
-        with open(self.filename_json, "w", encoding="utf-8") as file:
-            json.dump(new_vacancies, file, ensure_ascii=False, indent=4)
+        new_vacancies = []
+        for item in self.vacancies:
+            if str(item['id']) != str(id):
+                new_vacancies.append(item)
+        vacancies = Saver(new_vacancies, self.filename_xls)
+        vacancies.write_vacancies_xls()
