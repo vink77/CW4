@@ -1,8 +1,9 @@
-from abc import ABC,abstractmethod
+from abc import ABC, abstractmethod
 import requests
 
+
 class API(ABC):
-    def __init__(self, url, num_vacancies = 30):
+    def __init__(self, url, num_vacancies=30):
         self.url = url
         self.num_vacancies = num_vacancies
 
@@ -17,19 +18,20 @@ class API(ABC):
         :param string: строка для конвертации
         :return: строка без лишних символов
         """
-        symbols = ['  ', '   ','\n','</p>', '<p>', '</li>', '<li>', '<b>', '</b>', '<ul>', '<li>', '</li>', '<br />', '</ul>', '<highlighttext>', '·']
+        symbols = ['  ', '   ', '\n', '</p>', '<p>', '</li>', '<li>', '<b>', '</b>', '<ul>', '<li>', '</li>', '<br />',
+                   '</ul>', '<highlighttext>', '·']
         try:
             for symb in symbols:
                 string = string.replace(symb, " ")
-
         except AttributeError:
-
             return 'не указано'
         return string
 
+
 class HHApi(API):
-    result =[]
-    def __init__(self, url = 'https://api.hh.ru/vacancies' ):
+    result = []
+
+    def __init__(self, url='https://api.hh.ru/vacancies'):
         self.url = url
         super().__init__(url)
 
@@ -37,14 +39,14 @@ class HHApi(API):
         town_hh = [1, 2, 47, 4]
         params = {
             'text': request_job,
-            'area': town_hh[city-1],
+            'area': town_hh[city - 1],
             'pages': 0,
             'per_page': self.num_vacancies}
         response = requests.get(self.url, params).json()
 
-        #if response.status_code == 200:
+        # if response.status_code == 200:
         result = []
-        salary_from = salary_to =0
+        salary_from = salary_to = 0
         for item in response['items']:
             salary = item.get('salary', {})
             if salary == None:
@@ -58,26 +60,27 @@ class HHApi(API):
                 salary_from = salary.get('from')
                 salary_to = salary.get('to')
             result.append({
-                    "id": item["id"],
-                    "name": item['name'],
-                    "town": item['area']['name'],
-                    "firm_name": item['employer']['name'],
-                    "url": item['alternate_url'],
-                    "description": API.string_convert(item['snippet']['requirement']),
-                    "salary_to": salary_to,
-                    "salary_from": salary_from}
+                "id": item["id"],
+                "name": item['name'],
+                "town": item['area']['name'],
+                "firm_name": item['employer']['name'],
+                "url": item['alternate_url'],
+                "description": API.string_convert(item['snippet']['requirement']),
+                "salary_to": salary_to,
+                "salary_from": salary_from}
             )
         return result
 
+
 class SJApi(API):
-    def __init__(self, url = 'https://api.superjob.ru/2.0/vacancies' ):
+    def __init__(self, url='https://api.superjob.ru/2.0/vacancies'):
         self.url = url
         super().__init__(url)
 
     def search(self, request_job, city):
-       # api_key: str = os.getenv('Sjob_API_KEY')
-        dict_town_sj = {1: "Москва", 2: "Санкт-Петербург", 3: "Кемерово", 4:"Новосибирск"}
-        #town_sj = dict_town_sj[city]
+        # api_key: str = os.getenv('Sjob_API_KEY')
+        dict_town_sj = {1: "Москва", 2: "Санкт-Петербург", 3: "Кемерово", 4: "Новосибирск"}
+        # town_sj = dict_town_sj[city]
 
         headers = {
             'X-Api-App-Id':
@@ -90,18 +93,17 @@ class SJApi(API):
             "town": dict_town_sj[city]
         }
 
-
         response = requests.get(self.url, headers=headers, params=params).json()
         result = []
         for item in response['objects']:
             result.append({
-                    "id": item['id'],
-                    "name": item['profession'],
-                    "town": item['town']['title'],
-                    "firm_name": item['firm_name'],
-                    "url":item['link'],
-                    "description":API.string_convert(item['vacancyRichText']),
-                    "salary_to":item['payment_to'],
-                    "salary_from":item['payment_from']}
+                "id": item['id'],
+                "name": item['profession'],
+                "town": item['town']['title'],
+                "firm_name": item['firm_name'],
+                "url": item['link'],
+                "description": API.string_convert(item['vacancyRichText']),
+                "salary_to": item['payment_to'],
+                "salary_from": item['payment_from']}
             )
         return result
