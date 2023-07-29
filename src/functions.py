@@ -7,7 +7,7 @@ class Vacancy:
         self.vacancies = vacancies
 
     def output_vacancies(self):
-        # вывод списка вакансий в консоль
+        """ метод вывода списка вакансий в консоль"""
         # подготовка поля /description/ к читабельному виду
         for item in self.vacancies:
             s1 = f"Описание: {item['description']}".split(' ')
@@ -33,13 +33,12 @@ class Vacancy:
         print(f"\nНайдено {len(self.vacancies)} вакансий")
 
     def sort_list(self, sort_pool):
-
-        # сортировка списка "vacancies" по <от> или <до>
+        """ сортировка списка "vacancies" по <от> или <до>"""
         sorting = sorted(self.vacancies, key=lambda x: x[sort_pool], reverse=True)
         return sorting
 
     def filter_salary(self, salary_from, salary_to):
-        # фильтрация спискаа "vacancies" по зарплате <от> и/или <до>
+        """ фильтрация спискаа "vacancies" по зарплате <от> и/или <до>"""
         result_all = []
         for item in self.vacancies:
             if int(item['salary_from']) >= salary_from and int(item['salary_to']) <= salary_to and int(
@@ -48,7 +47,7 @@ class Vacancy:
         return result_all
 
     def filter_salary_zero(self):
-        # фильтрация спискаа "vacancies" по зарплате <от> и/или <до>
+        """ фильтрация спискаа "vacancies" по зарплате <от> и/или <до>"""
         result_all = []
         for item in self.vacancies:
             if int(item['salary_from']) != 0 or int(item['salary_to']) != 0:

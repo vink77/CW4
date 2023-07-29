@@ -9,6 +9,7 @@ class API(ABC):
 
     @abstractmethod
     def search(self, request_job):
+        """абстрактный метод поиска вакансий с платформ"""
         pass
 
     @staticmethod
@@ -29,6 +30,7 @@ class API(ABC):
 
 
 class HHApi(API):
+    """класс получения данных с платформы HH.ru"""
     result = []
 
     def __init__(self, url='https://api.hh.ru/vacancies'):
@@ -36,6 +38,7 @@ class HHApi(API):
         super().__init__(url)
 
     def search(self, request_job, city):
+        """метод поиска вакансий с платформы HH"""
         town_hh = [1, 2, 47, 4]
         params = {
             'text': request_job,
@@ -73,11 +76,15 @@ class HHApi(API):
 
 
 class SJApi(API):
+    """класс получения данных с платформы SuperJob.ru"""
+
     def __init__(self, url='https://api.superjob.ru/2.0/vacancies'):
         self.url = url
         super().__init__(url)
 
     def search(self, request_job, city):
+        """метод поиска вакансий с платформы SJ"""
+
         # api_key: str = os.getenv('Sjob_API_KEY')
         dict_town_sj = {1: "Москва", 2: "Санкт-Петербург", 3: "Кемерово", 4: "Новосибирск"}
         # town_sj = dict_town_sj[city]

@@ -11,11 +11,12 @@ class Saver:
         self.vacancies = vacancies
 
     def write_vacancies_json(self):
-        """Метод для добавления вакансий в JSON формате в файл vacancies.json"""
+        """Метод для добавления вакансий в JSON формате в файл .json"""
         with open(self.filename_json, 'w', encoding='utf-8') as file:
             json.dump(self.vacancies, file, ensure_ascii=False, indent=4)
 
     def delete_vacancy_json(self, id):
+        """Метод для удаления вакансий из JSON файла .json по id"""
         with open(self.filename_json, "r", encoding="utf-8") as file:
             vacancies = json.load(file)
             new_vacancies = []
@@ -26,7 +27,7 @@ class Saver:
             json.dump(new_vacancies, file, ensure_ascii=False, indent=4)
 
     def write_vacancies_xls(self) -> None:
-        '''метод для записи в файл-xls'''
+        """метод для записи в файл-xls"""
         id = []
         name = []
         town = []
