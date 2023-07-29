@@ -1,8 +1,8 @@
-from src.api import *
-from save_file import *
-from load_file import *
-from functions import *
-import os, pandas
+from src.api import HHApi, SJApi
+from save_file import Saver
+from load_file import Loader
+from functions import Vacancy
+import os
 
 
 class Job():
@@ -14,12 +14,12 @@ class Job():
     file_name = 'my_name'
     result_all = []
     while True:
-        print(f"\n{' ' * 8}ОСНОВНОЕ МЕНЮ")
-        print("1. найти и вывести список вакансий с ресурсов HH.ru и SuperJob.ru")
-        print("2. МЕНЮ работыс  файлом json")
-        print("3. МЕНЮ работы с файлом xlsx")
-        print("4. МЕНЮ фильтров ")
-        print("5. выйти")
+        print(f"\n{' ' * 8}ОСНОВНОЕ МЕНЮ\n\
+1. найти и вывести список вакансий с ресурсов HH.ru и SuperJob.ru\n\
+2. МЕНЮ работыс  файлом json\n\
+3. МЕНЮ работы с файлом xlsx\n\
+4. МЕНЮ фильтров \n\
+5. выйти")
         choiсe = input("Ваш выбор - ")
         if choiсe == '1':
             result_all = []
@@ -37,13 +37,13 @@ class Job():
             vacancy.output_vacancies()
         if choiсe == "2":
             while True:
-                print(f"\n{' ' * 8} МЕНЮ работы с файлом {file_name}.json")
-                print("1. сохранить вакансии в файл json")
-                print("2. удалить вакансию из файла json по id")
-                print("3. показать вакансии из файла json")
-                print("4. задать имя файла json")
-                print("5. удалить файл json")
-                print("6. выход в основное меню")
+                print(f"\n{' ' * 8} МЕНЮ работы с файлом {file_name}.json\n\
+1. сохранить вакансии в файл json\n\
+2. удалить вакансию из файла json по id\n\
+3. показать вакансии из файла json\n\
+4. задать имя файла json\n\
+5. удалить файл json\n\
+6. выход в основное меню")
                 choiсe_file = input("     Ваш выбор: ")
                 if choiсe_file == "1":
                     write = Saver(result_all, file_name)
@@ -71,13 +71,13 @@ class Job():
                     break
         if choiсe == "3":
             while True:
-                print(f"\n{' ' * 8} МЕНЮ работы с файлом {file_name}.xlsx")
-                print("1. сохранить вакансии в файл xls")
-                print("2. удалить вакансию из файла xls по id")
-                print("3. показать вакансии из файла xls")
-                print("4. задать имя файла xls")
-                print("5. удалить файл xls")
-                print("6. выход в основное меню")
+                print(f"\n{' ' * 8} МЕНЮ работы с файлом {file_name}.xlsx\n\
+1. сохранить вакансии в файл xls\n\
+2. удалить вакансию из файла xls по id\n\
+3. показать вакансии из файла xls\n\
+4. задать имя файла xls\n\
+5. удалить файл xls\n\
+6. выход в основное меню")
                 choiсe_file = input("     Ваш выбор: ")
                 if choiсe_file == "1":
                     write = Saver(result_all, file_name)
@@ -103,13 +103,13 @@ class Job():
                     break
         if choiсe == "4":
             if result_all != []:
-                print(f"\n{' ' * 8} МЕНЮ работы с фильтрами")
-                print("1. Упорядочить список по зарплате < ОТ >")
-                print("2. Упорядочить список по зарплате < ДО >")
-                print(f"3. Показать список вакансий с зарплатой {SALARY_FROM} - {SALARY_TO} руб.")
-                print(f"4. Показать список вакансий с зарплатой 0 - {SALARY_FROM} руб.")
-                print("5. Удалить из списка вакансии без указания зарплаты")
-                print("6. выход в основное меню")
+                print(f"\n{' ' * 8} МЕНЮ работы с фильтрами\n\
+1. Упорядочить список по зарплате < ОТ >\n\
+2. Упорядочить список по зарплате < ДО >\n\
+3. Показать список вакансий с зарплатой {SALARY_FROM} - {SALARY_TO} руб.\n\
+4. Показать список вакансий с зарплатой 0 - {SALARY_FROM} руб.\n\
+5. Удалить из списка вакансии без указания зарплаты\n\
+6. выход в основное меню")
                 choiсe_filter = input("     Ваш выбор: ")
                 if choiсe_filter == "1" or choiсe_filter == "2":
                     dict_choice = {"1": "salary_from", "2": 'salary_to'}
